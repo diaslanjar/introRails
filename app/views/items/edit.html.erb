@@ -1,0 +1,12 @@
+<h2>Edit Item</h2>
+<%= form_for @item do |item| %>
+<h3>Edit <%= @item.name %></h3>
+<div>
+  <%= item.text_field :name, placeholder: :name %>
+  <%= item.text_field :price, placeholder: :price %>
+  <%= item.submit 'Update Item' %>
+</div>
+<div>
+  <%= link_to 'Back', {controller: 'items', action: 'index'} %>
+</div>
+<% end %>
